@@ -9,55 +9,47 @@ package com.netassist;
  *
  * @author Usuário
  */
-public class Funcionario {
-    private String nome;
-    private String cpf;
-    private String senha;
+public class Funcionario extends Pessoa{
+    
     private String usuario;
-    private int id;
-    public Endereco endereco;
-    public Funcionario funcionario;
+    private String senha;
+    private int idFuncionario;
     private String cargo;
 
-    public String getNome() {
-        return nome;
+    public Funcionario(){
+        super();
     }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Funcionario(String usuario, String senha, int idFuncionario, String cargo, String nome, String cpf, Endereco endereco) {
+        super(nome, cpf, endereco);
+        this.usuario = "wellingtonracer";
+        this.senha = "123";
+        this.idFuncionario = 0;
+        this.cargo = "Administrador";
     }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-    
-    public String getSenha(){
-        return senha;
-    }
-    
-    public void setSenha(String senha){
-        this.senha = senha;
-    }
-    
-    public String getUsuario(){
+    public String getUsuario() {
         return usuario;
     }
-    
-    public void setUsuario(String usuario){
+
+    public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
-    public int getId() {
-        return id;
+
+    public String getSenha() {
+        return senha;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
+    public int getIdFuncionario() {
+        return idFuncionario;
+    }
+
+    public void setIdFuncionario(int idFuncionario) {
+        this.idFuncionario = idFuncionario;
+    }
+    
     public String getCargo() {
         return cargo;
     }
@@ -65,6 +57,12 @@ public class Funcionario {
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" + "usuario=" + usuario + ", senha=" + senha + ", idFuncionario=" + idFuncionario + ", cargo=" + cargo + '}';
+    }
+    
     
     
 }
