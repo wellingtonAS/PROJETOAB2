@@ -16,7 +16,7 @@ public class Cliente extends Pessoa{
     private Plano plano;
 
     public Cliente(String nome, String cpf, Endereco endereco) {
-        super(nome, cpf, endereco);
+        super();
     }
     
     public int getStatusContrato() {

@@ -19,12 +19,12 @@ public class Funcionario extends Pessoa{
     public Funcionario(){
         super();
     }
-    public Funcionario(String usuario, String senha, int idFuncionario, String cargo, String nome, String cpf, Endereco endereco) {
-        super(nome, cpf, endereco);
-        this.usuario = "wellingtonracer";
-        this.senha = "123";
-        this.idFuncionario = 0;
-        this.cargo = "Administrador";
+    public Funcionario(String usuario, String senha, int idFuncionario, String cargo, String nome, String cpf, Endereco end) {
+        super(nome, cpf, end);
+        this.usuario = usuario;
+        this.senha = senha;
+        this.idFuncionario = idFuncionario;
+        this.cargo = cargo;
     }
     public String getUsuario() {
         return usuario;
@@ -56,13 +56,10 @@ public class Funcionario extends Pessoa{
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
-    }
-
+    } 
+    
     @Override
     public String toString() {
         return "Funcionario{" + "usuario=" + usuario + ", senha=" + senha + ", idFuncionario=" + idFuncionario + ", cargo=" + cargo + '}';
     }
-    
-    
-    
 }

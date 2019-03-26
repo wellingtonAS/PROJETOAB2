@@ -17,11 +17,11 @@ public class Endereco {
     private int numero;
 
     public Endereco(String cidade, String estado, String cep, String rua, int numero) {
-        this.cidade = "Taquarana";
-        this.estado = "Alagoas";
-        this.cep = "57.640-000";
-        this.rua = "Rua Eraclito";
-        this.numero = 11;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
+        this.rua = rua;
+        this.numero = numero;
     }    
     public String getCidade() {
         return cidade;

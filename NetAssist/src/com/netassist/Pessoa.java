@@ -1,17 +1,58 @@
 package com.netassist;
 
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
     private String cpf;
     private Endereco end;
 
-    public Pessoa(){
-        //this.end = new Endereco();
-    }
-    public Pessoa(String nome, String cpf, Endereco endereco) {
-        this.nome = "Wellington Araújo Santos";
-        this.cpf = "123.456.789-98";
+    public Pessoa(String nome, String cpf, Endereco end) {
+        this.nome = nome;
+        this.cpf = cpf;
         this.end = end;
+    }
+
+    public String getCidade() {
+        return end.getCidade();
+    }
+
+    public void setCidade(String cidade) {
+        end.setCidade(cidade);
+    }
+
+    public String getEstado() {
+        return end.getEstado();
+    }
+
+    public void setEstado(String estado) {
+        end.setEstado(estado);
+    }
+
+    public String getCep() {
+        return end.getCep();
+    }
+
+    public void setCep(String cep) {
+        end.setCep(cep);
+    }
+
+    public String getRua() {
+        return end.getRua();
+    }
+
+    public void setRua(String rua) {
+        end.setRua(rua);
+    }
+
+    public int getNumero() {
+        return end.getNumero();
+    }
+
+    public void setNumero(int numero) {
+        end.setNumero(numero);
+    }
+    
+    public Pessoa(){
+        super();
     }
     
     public String getNome() {
