@@ -5,6 +5,8 @@
  */
 package com.netassist;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Usuário
@@ -14,12 +16,12 @@ public class Funcionario extends Pessoa{
     private String usuario;
     private String senha;
     private int idFuncionario;
-    private String cargo;
+    private int cargo;
 
     public Funcionario(){
         super();
     }
-    public Funcionario(String usuario, String senha, int idFuncionario, String cargo, String nome, String cpf, Endereco end) {
+    public Funcionario(String usuario, String senha, int idFuncionario, int cargo, String nome, String cpf, Endereco end) {
         super(nome, cpf, end);
         this.usuario = usuario;
         this.senha = senha;
@@ -50,14 +52,17 @@ public class Funcionario extends Pessoa{
         this.idFuncionario = idFuncionario;
     }
     
-    public String getCargo() {
+    public int getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(int cargo) {
         this.cargo = cargo;
     } 
-    
+    public void efetuarLogin(){
+   
+        
+    }
     @Override
     public String toString() {
         return "Funcionario{" + "usuario=" + usuario + ", senha=" + senha + ", idFuncionario=" + idFuncionario + ", cargo=" + cargo + '}';

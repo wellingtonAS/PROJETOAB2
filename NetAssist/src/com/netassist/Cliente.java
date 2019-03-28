@@ -13,7 +13,7 @@ public class Cliente extends Pessoa{
     private int statusContrato;
     private int statusAcesso;
     private int idCliente;
-    private Plano plano;
+    private Contrato contrato;
 
     public Cliente(String nome, String cpf, Endereco endereco) {
         super();
@@ -43,12 +43,12 @@ public class Cliente extends Pessoa{
         this.idCliente = idCliente;
     }
 
-    public Plano getPlano() {
-        return plano;
+    public Contrato getContrato() {
+        return contrato;
     }
 
-    public void setPlano(Plano plano) {
-        this.plano = plano;
+    public void setContrato(Contrato contrato) {
+        this.contrato = contrato;
     }
-    
+  
 }
