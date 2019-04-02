@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.netassist;
 
-/**
- *
- * @author Usuário
- */
 public class Tecnico extends Funcionario{
+
+    public Tecnico() {
+    }
+
+    public Tecnico(String usuario, String senha, int idFuncionario, int cargo, String nome, String cpf, Endereco end) {
+        super(usuario, senha, idFuncionario, cargo, nome, cpf, end);
+    }
     
 }

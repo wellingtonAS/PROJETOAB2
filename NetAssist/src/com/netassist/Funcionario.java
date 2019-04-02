@@ -1,23 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.netassist;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
-/**
- *
- * @author Usuário
- */
 public class Funcionario extends Pessoa{
     
     private String usuario;
     private String senha;
     private int idFuncionario;
     private int cargo;
-
+    
     public Funcionario(){
         super();
     }
@@ -59,12 +50,27 @@ public class Funcionario extends Pessoa{
     public void setCargo(int cargo) {
         this.cargo = cargo;
     } 
-    public void efetuarLogin(){
-   
-        
-    }
     @Override
     public String toString() {
         return "Funcionario{" + "usuario=" + usuario + ", senha=" + senha + ", idFuncionario=" + idFuncionario + ", cargo=" + cargo + '}';
+    }
+    
+    //Metodo para verificar a autenticidade dos funcionarios listados! 
+    public boolean efetuarLogin(Funcionario funcionario, ArrayList<Funcionario> listaFuncionario){
+        int at = 0;
+        for(int i=0; i<listaFuncionario.size(); i++){
+            if((funcionario.getUsuario().equals(listaFuncionario.get(i).getUsuario()))&&(funcionario.getSenha().equals(listaFuncionario.get(i).getSenha()))){
+                at = 1;
+                break;
+            }
+        }
+        if(at == 0){
+            System.out.println("Erro de Autenticação!");
+            return false;
+        }
+        else{
+            System.out.println("Entrando do Sistema! Aguarde um pouco!");
+            return true;
+        }
     }
 }

@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.netassist;
 
-/**
- *
- * @author Usuário
- */
 public class Logins {
     private int autenticacao;
     private int tipoConexao;
@@ -67,7 +58,5 @@ public class Logins {
     @Override
     public String toString() {
         return "Logins{" + "autenticacao=" + autenticacao + ", tipoConexao=" + tipoConexao + ", loginAcesso=" + loginAcesso + ", senhaAcesso=" + senhaAcesso + ", ip=" + ip + '}';
-    }
-    
-    
+    }   
 }
