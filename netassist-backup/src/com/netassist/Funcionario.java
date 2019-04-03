@@ -7,12 +7,12 @@ public class Funcionario extends Pessoa{
     private String usuario;
     private String senha;
     private int idFuncionario;
-    private int cargo;
+    private String cargo;
     
     public Funcionario(){
         super();
     }
-    public Funcionario(String usuario, String senha, int idFuncionario, int cargo, String nome, String cpf, Endereco end) {
+    public Funcionario(String usuario, String senha, int idFuncionario, String cargo, String nome, String cpf, Endereco end) {
         super(nome, cpf, end);
         this.usuario = usuario;
         this.senha = senha;
@@ -43,11 +43,11 @@ public class Funcionario extends Pessoa{
         this.idFuncionario = idFuncionario;
     }
     
-    public int getCargo() {
+    public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(int cargo) {
+    public void setCargo(String cargo) {
         this.cargo = cargo;
     } 
     @Override
