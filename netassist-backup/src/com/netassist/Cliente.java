@@ -1,29 +1,22 @@
 package com.netassist;
 
 public class Cliente extends Pessoa{
-    private int statusContrato;
-    private int statusAcesso;
     private int idCliente;
     private Contrato contrato;
 
-    public Cliente(String nome, String cpf, Endereco endereco) {
+    public Cliente() {
         super();
     }
-    
-    public int getStatusContrato() {
-        return statusContrato;
+
+    public Cliente(int idCliente, Contrato contrato, String nome, String cpf, Endereco end) {
+        super(nome, cpf, end);
+        this.idCliente = idCliente;
+        this.contrato = contrato;
     }
 
-    public void setStatusContrato(int statusContrato) {
-        this.statusContrato = statusContrato;
-    }
-
-    public int getStatusAcesso() {
-        return statusAcesso;
-    }
-
-    public void setStatusAcesso(int statusAcesso) {
-        this.statusAcesso = statusAcesso;
+    public Cliente(int idCliente, Contrato contrato) {
+        this.idCliente = idCliente;
+        this.contrato = contrato;
     }
 
     public int getIdCliente() {
@@ -41,5 +34,6 @@ public class Cliente extends Pessoa{
     public void setContrato(Contrato contrato) {
         this.contrato = contrato;
     }
-  
+    
+    //public void cadastrarCliente()
 }
